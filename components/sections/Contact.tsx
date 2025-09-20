@@ -39,6 +39,7 @@ const Contact: React.FC = () => {
             setIsSubmitting(true);
             const form = new FormData(e.currentTarget);
             form.append('access_key', accessKey);
+            form.append('Message From', 'Portfolio\'s Contact Form');
             if (!form.get('subject')) {
                 form.set('subject', 'New message from portfolio contact form');
             }
