@@ -6,6 +6,8 @@ import { MenuIcon, XIcon } from './Icons';
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isMenuRendered, setIsMenuRendered] = useState(false);
+
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 10);
@@ -33,6 +35,17 @@ const Header: React.FC = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            setIsMenuRendered(true);
+        } else {
+            const timer = setTimeout(() => {
+                setIsMenuRendered(false);
+            }, 500);
+            return () => clearTimeout(timer);
+        }
+    }, [mobileMenuOpen]);
+
     return (
         <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-lg shadow-lg shadow-[#6049EA]/10' : 'bg-transparent'}`}>
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -53,9 +66,14 @@ const Header: React.FC = () => {
                     </button>
                 </div>
             </nav>
-            {mobileMenuOpen && (
-                <div className="md:hidden bg-black/80 backdrop-blur-md absolute top-full left-0 w-full animate-[slide-in-bottom_0.5s_cubic-bezier(0.250,0.460,0.450,0.940)_both]">
+            {isMenuRendered && (
+                <div className={`md:hidden bg-black/80 backdrop-blur-md absolute top-full left-0 w-full ${
+                    mobileMenuOpen 
+                        ? 'animate-[slide-in-bottom_0.5s_cubic-bezier(0.250,0.460,0.450,0.940)_both]' 
+                        : 'animate-[slide-out-down_0.5s_cubic-bezier(0.550,0.085,0.680,0.530)_both]'
+                }`}>
                     <div className="flex flex-col items-center py-4 space-y-4">
+                        {/* Map over NAV_LINKS to render them for the mobile menu. */}
                         {NAV_LINKS.map(link => (
                             <a key={link.name} href={link.href} onClick={handleLinkClick} className="text-lg text-white hover:text-[#6049EA] transition-colors duration-300">
                                 {link.name}

@@ -23,7 +23,7 @@ const Hero: React.FC = () => {
     };
 
     return (
-        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden p-6">
+        <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 pt-24 pb-6 lg:pt-6">
             <div className="absolute inset-0 z-0">
                 <Particle animation="particle-float-1 20s" className="w-16 h-16 top-1/4 left-1/4" />
                 <Particle animation="particle-float-2 25s" className="w-8 h-8 top-1/2 left-3/4" />

@@ -51,6 +51,16 @@
             opacity: 1;
           }
         }
+        @keyframes slide-out-down {
+          0% {
+            transform: translateY(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(100px);
+            opacity: 0;
+          }
+        }
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 80px; /* Offset for fixed header */
