@@ -1,0 +1,37 @@
+/* Global minimal scrollbar styles for elements that opt-in via the class below */
+@import "tailwindcss";
+
+/* Tailwind v4 uses a single import above; v3 @tailwind at-rules removed */
+
+/* Firefox */
+.minimal-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.25) transparent; /* thumb color | track color */
+}
+
+/* Chromium / WebKit */
+.minimal-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-radius: 9999px;
+}
+
+.minimal-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Optionally hide scrollbar on very small screens to maximize space */
+@media (max-width: 640px) {
+  .minimal-scrollbar::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+}
