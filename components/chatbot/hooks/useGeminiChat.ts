@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { GoogleGenAI, Chat } from "@google/genai";
 
 // Read API key from Vite client env
-const API_KEY = (import.meta as any).env?.VITE_GEMINI_API_KEY as string | undefined;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY as string | undefined;
 if (!API_KEY) {
   // eslint-disable-next-line no-console
   console.warn(
