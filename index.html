@@ -10,68 +10,89 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&family=Inter:wght@400;500&family=Fira+Code:wght@500&display=swap" rel="stylesheet">
     <style>
-        @keyframes gradient-wave {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+      @keyframes gradient-wave {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+      }
+      @keyframes particle-float-1 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
+          50% { transform: translate(20px, -30px) scale(1.1); opacity: 1; }
+      }
+      @keyframes particle-float-2 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
+          50% { transform: translate(-25px, 20px) scale(0.9); opacity: 0.9; }
+      }
+       @keyframes particle-float-3 {
+          0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+          50% { transform: translate(15px, 30px) scale(1.2); opacity: 0.8; }
+      }
+      @keyframes orbital-spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+      }
+      @keyframes text-focus-in {
+        0% {
+          filter: blur(12px);
+          opacity: 0;
         }
-        @keyframes particle-float-1 {
-            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.8; }
-            50% { transform: translate(20px, -30px) scale(1.1); opacity: 1; }
+        100% {
+          filter: blur(0px);
+          opacity: 1;
         }
-        @keyframes particle-float-2 {
-            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.7; }
-            50% { transform: translate(-25px, 20px) scale(0.9); opacity: 0.9; }
+      }
+      @keyframes slide-in-bottom {
+        0% {
+          transform: translateY(100px);
+          opacity: 0;
         }
-         @keyframes particle-float-3 {
-            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
-            50% { transform: translate(15px, 30px) scale(1.2); opacity: 0.8; }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
         }
-        @keyframes orbital-spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+      }
+      @keyframes slide-out-down {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
         }
-        @keyframes text-focus-in {
-          0% {
-            filter: blur(12px);
-            opacity: 0;
-          }
-          100% {
-            filter: blur(0px);
-            opacity: 1;
-          }
+        100% {
+          transform: translateY(100px);
+          opacity: 0;
         }
-        @keyframes slide-in-bottom {
-          0% {
-            transform: translateY(100px);
-            opacity: 0;
-          }
-          100% {
-            transform: translateY(0);
-            opacity: 1;
-          }
+      }
+      @keyframes slide-in-top {
+        0% {
+          transform: translateY(-50px);
+          opacity: 0;
         }
-        @keyframes slide-out-down {
-          0% {
-            transform: translateY(0);
-            opacity: 1;
-          }
-          100% {
-            transform: translateY(100px);
-            opacity: 0;
-          }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
         }
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 80px; /* Offset for fixed header */
+      }
+      @keyframes slide-out-top {
+        0% {
+          transform: translateY(0);
+          opacity: 1;
         }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000000;
-            color: #FFFFFF;
-            overflow-x: hidden;
+        100% {
+          transform: translateY(-50px);
+          opacity: 0;
         }
+      }
+      html {
+          scroll-behavior: smooth;
+          scroll-padding-top: 80px; /* Offset for fixed header */
+      }
+      body {
+          font-family: 'Inter', sans-serif;
+          background-color: #000000;
+          color: #FFFFFF;
+          overflow-x: hidden;
+      }
     </style>
+
 <script type="importmap">
 {
   "imports": {

@@ -59,7 +59,7 @@ export const SKILLS_DATA: { [key: string]: Skill[] } = {
 export const PROJECTS_DATA: Project[] = [
     {
         title: 'Policy Information and Analytical System',
-        description: 'Data visualization and reporting system built with R to automate institutional reports and improve decision-making.',
+        description: 'Automated institutional data reporting and visualization system built with R.',
         fullDescription: 'The Policy Information and Analytical System (PIAS) is an institutional data reporting and visualization platform developed with R. It automates the generation of policy-related reports, provides interactive charts and dashboards, and streamlines decision-making for administrators. PIAS significantly reduced manual reporting time and improved the accessibility of institutional insights.',
         image: 'images/pias-project.png',
         tags: ['R', 'R Shiy', 'MariaDB', 'Plotly'],
@@ -69,7 +69,7 @@ export const PROJECTS_DATA: Project[] = [
     },
     {
         title: 'Aros Pet - AI Robot Partner',
-        description: 'An interactive AI-powered virtual pet with expressive personality, games, and playful interactions.',
+        description: 'A playful, interactive, AI-powered virtual pet.',
         fullDescription: 'Aros PET is a virtual pet powered by Google\'s Gemini AI. More than a chatbot, Aros is a playful digital companion with emotions, interactive commands, and fun activities. Users can chat, play games, customize its style, and even manage its needs like energy and snacks. Built as a creative coding project, Aros PET combines front-end animation with modern AI to deliver a delightful companion experience.',
         image: 'images/aros-pet.png',
         tags: ['React', 'TypeScript', 'TailwindCSS', 'Gemini AI'],

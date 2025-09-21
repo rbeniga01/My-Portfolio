@@ -89,7 +89,9 @@ const ProjectCard: React.FC<{ project: Project; onSelect: () => void; isSelected
     return (
         <div 
             onClick={onSelect}
-            className={`group relative overflow-hidden rounded-xl bg-white/5 border-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#6049EA]/20 hover:-translate-y-0 cursor-pointer ${isSelected ? 'border-[#6049EA]' : 'border-white/10'}`}>
+            className={`grid gap-6 group relative overflow-hidden rounded-xl bg-white/5 border-2 transition-all duration-500 hover:shadow-2xl hover:shadow-[#6049EA]/20 hover:-translate-y-0 cursor-pointer ${isSelected ? 'border-[#6049EA]' : 'border-white/10'}`}
+            style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))' }}
+            >
             <img src={project.image} alt={project.title} className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-transparent"></div>
             <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -111,7 +113,7 @@ const ProjectCard: React.FC<{ project: Project; onSelect: () => void; isSelected
 
 /** Projects: filterable grid with inline expansion. */
 const Projects: React.FC = () => {
-    const [filter, setFilter] = useState<'All' | 'Full Stack' | 'Frontend'>('All');
+    const [filter, setFilter] = useState<'All' | 'Full Stack' | 'AI / Interactive App'>('All');
     const [selectedProjectTitle, setSelectedProjectTitle] = useState<string | null>(null);
     const [closingProjectTitle, setClosingProjectTitle] = useState<string | null>(null);
 
@@ -135,7 +137,7 @@ const Projects: React.FC = () => {
         }
     };
     
-    const handleFilterChange = (category: 'All' | 'Full Stack' | 'Frontend') => {
+    const handleFilterChange = (category: 'All' | 'Full Stack' | 'AI / Interactive App' ) => {
         if (closingProjectTitle) return;
 
         if (selectedProjectTitle) {
@@ -170,7 +172,7 @@ const Projects: React.FC = () => {
                 <div className="w-24 h-1 bg-gradient-to-r from-[#6049EA] to-transparent mx-auto mb-12"></div>
 
                 <div className="flex justify-center gap-4 mb-12">
-                    {(['All', 'Full Stack', 'Frontend'] as const).map(category => (
+                    {(['All', 'Full Stack', 'AI / Interactive App'] as const).map(category => (
                         <button 
                             key={category}
                             onClick={() => handleFilterChange(category)}

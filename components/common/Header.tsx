@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { NAV_LINKS } from '../../constants';
 import { MenuIcon, XIcon } from './Icons';
 
-/** Site header with logo, navigation, and responsive mobile menu. Sticky on scroll. */
+/**
+ * The website header, featuring navigation, a responsive mobile menu,
+ * and a sticky effect on scroll.
+ */
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,25 +19,6 @@ const Header: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        e.preventDefault();
-        const href = e.currentTarget.getAttribute('href');
-        if (!href || !href.startsWith('#')) return;
-
-        const targetId = href.substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-        if (mobileMenuOpen) {
-            setMobileMenuOpen(false);
-        }
-    };
-
-    const toggleMobileMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen);
-    };
-
     useEffect(() => {
         if (mobileMenuOpen) {
             setIsMenuRendered(true);
@@ -45,6 +29,28 @@ const Header: React.FC = () => {
             return () => clearTimeout(timer);
         }
     }, [mobileMenuOpen]);
+
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+        e.preventDefault();
+        
+        const href = e.currentTarget.getAttribute('href');
+        if (!href || !href.startsWith('#')) return;
+
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        if (mobileMenuOpen) {
+            setMobileMenuOpen(false);
+        }
+    };
+
+    const toggleMobileMenu = () => {
+        setMobileMenuOpen(!mobileMenuOpen);
+    };
 
     return (
         <header className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${scrolled ? 'bg-black/50 backdrop-blur-lg shadow-lg shadow-[#6049EA]/10' : 'bg-transparent'}`}>
@@ -69,11 +75,10 @@ const Header: React.FC = () => {
             {isMenuRendered && (
                 <div className={`md:hidden bg-black/80 backdrop-blur-md absolute top-full left-0 w-full ${
                     mobileMenuOpen 
-                        ? 'animate-[slide-in-bottom_0.5s_cubic-bezier(0.250,0.460,0.450,0.940)_both]' 
-                        : 'animate-[slide-out-down_0.5s_cubic-bezier(0.550,0.085,0.680,0.530)_both]'
+                        ? 'animate-[slide-in-top_0.5s_cubic-bezier(0.250,0.460,0.450,0.940)_both]' 
+                        : 'animate-[slide-out-top_0.5s_cubic-bezier(0.550,0.085,0.680,0.530)_both]'
                 }`}>
                     <div className="flex flex-col items-center py-4 space-y-4">
-                        {/* Map over NAV_LINKS to render them for the mobile menu. */}
                         {NAV_LINKS.map(link => (
                             <a key={link.name} href={link.href} onClick={handleLinkClick} className="text-lg text-white hover:text-[#6049EA] transition-colors duration-300">
                                 {link.name}
@@ -87,4 +92,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-
