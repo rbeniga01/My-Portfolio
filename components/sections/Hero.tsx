@@ -48,7 +48,8 @@ const Hero: React.FC = () => {
                         Hi, I'm Richard Beniga,<br/> Full Stack Developer
                     </h1>
                     <p className="text-lg md:text-xl text-white/80 mb-8">
-                    Building real-world solutions—where practical design meets efficient, reliable technology.
+                    What if your next project didn’t just get built — but was designed to grow with you?
+I create digital solutions that are practical, efficient, and tailored to your needs.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                         <a href="#projects" onClick={handleScrollClick} className="w-full sm:w-auto px-8 py-3 rounded-full bg-gradient-to-r from-[#6049EA] to-purple-500 text-white font-semibold transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-[#6049EA]/30">

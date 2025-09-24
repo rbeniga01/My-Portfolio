@@ -84,27 +84,27 @@ export const PROJECTS_DATA: Project[] = [
 export const SERVICES_DATA: Service[] = [
     {
         title: 'Personal / Portfolio Website',
-        description: 'A simple, responsive website for students or freelancers to showcase projects, resumes, or portfolios. Clean design with easy navigation.',
-        details: 'Delivery: 3–5 days · Up to 3 pages · Mobile-ready · Free basic hosting setup guide',
-        price: 'Starts at PHP 1,000'
+        description: 'A clean and modern website that tells your story. Perfect for showcasing who you are, your work, or your services. Simple, professional, and works beautifully on any device.',
+        details: 'Quick turnaround · Up to 3 pages · Works on phone and computer · Guidance for putting it online',
+        price: ''
     },
     {
-        title: 'Thesis / School Project Assistance',
-        description: 'Development support for capstone, thesis, or major projects. Can cover web apps, dashboards, or data-driven systems depending on requirements.',
-        details: 'Delivery: 1–3 weeks depending on scope · Includes documentation help · One round of revisions',
-        price: 'PHP 3,000+'
+        title: 'Custom Website or Project Assistance',
+        description: 'Got a school project, thesis, or a unique idea for a website or app? I can help turn it into something real — whether it’s a simple site, a system with logins and data, or a special project made just for your needs.',
+        details: 'Timeline depends on project scope · Help with documentation · One round of revisions · Includes support after delivery',
+        price: ''
     },
     {
-        title: 'Mini Web App',
-        description: 'Lightweight web application with login, database, and basic CRUD features. Perfect for learning projects, prototypes, or small organizations.',
-        details: 'Delivery: 1–2 weeks · Built with modern frameworks · Includes 1-week support',
-        price: 'PHP 7,000+'
+        title: 'Full Website Build',
+        description: 'A complete website solution built from the ground up. Ideal for businesses, organizations, or anyone who needs a professional online presence with multiple pages, features, and a design tailored to your goals.',
+        details: 'Project timeline adjusted to your needs · Mobile-friendly design · Built with modern tools · After-delivery support included',
+        price: ''
     },
     // {
     //     title: 'Tutoring & Guidance',
-    //     description: 'One-on-one sessions to guide students through coding concepts, debugging help, or project walkthroughs.',
-    //     details: 'Flexible schedule · Online/remote support · Beginner-friendly',
-    //     price: 'PHP 300/hr'
+    //     description: 'One-on-one guidance for students or beginners. I can explain coding concepts, help debug errors, or walk you through your project step by step.',
+    //     details: 'Flexible schedule · Online sessions · Beginner-friendly',
+    //     price: ''
     // }
 ];
 
