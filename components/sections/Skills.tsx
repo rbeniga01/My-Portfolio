@@ -50,7 +50,7 @@ const Skills: React.FC = () => {
     return (
         <section id="skills" className="py-24 bg-black/50">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-['Space_Grotesk']">Skills Matrix</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-['Space_Grotesk']">My Tech Stack</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-[#6049EA] to-transparent mx-auto mb-12"></div>
 
                 <div className="flex justify-center flex-wrap gap-2 md:gap-4 mb-12">

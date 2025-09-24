@@ -4,7 +4,7 @@ import {
     JavaScriptIcon, TypeScriptIcon, PHPIcon, PythonIcon, RLangIcon, HTMLIcon, CSSIcon,
     ReactIcon, LaravelIcon, TailwindIcon, BootstrapIcon,
     MySQLIcon, PostgreSQLIcon,
-    GitIcon, GithubSkillIcon, ViteIcon
+    GitIcon, GithubSkillIcon, ViteIcon, ExpressIcon, ShinyIcon, SQLiteIcon
 } from './components/common/Icons';
 
 
@@ -34,24 +34,27 @@ export const SKILLS_DATA: { [key: string]: Skill[] } = {
         { name: 'PHP', level: 100, icon: React.createElement(PHPIcon) },
         { name: 'Python', level: 100, icon: React.createElement(PythonIcon) },
         { name: 'R', level: 100, icon: React.createElement(RLangIcon) },
+    ],
+    "Front-End Development": [
+        { name: 'React.js', level: 100, icon: React.createElement(ReactIcon) },
+        { name: 'Tailwind CSS', level: 100, icon: React.createElement(TailwindIcon) },
         { name: 'HTML', level: 100, icon: React.createElement(HTMLIcon) },
         { name: 'CSS', level: 100, icon: React.createElement(CSSIcon) },
     ],
-    "Frameworks": [
-        { name: 'React.js', level: 100, icon: React.createElement(ReactIcon) },
+    "Back-End / Frameworks": [
         { name: 'Laravel', level: 100, icon: React.createElement(LaravelIcon) },
-        { name: 'Vite', level: 100, icon: React.createElement(ViteIcon) }, // Added Vite here
-        { name: 'Tailwind CSS', level: 100, icon: React.createElement(TailwindIcon) },
-        { name: 'Bootstrap', level: 100, icon: React.createElement(BootstrapIcon) },
+        { name: 'Express.js', level: 100, icon: React.createElement(ExpressIcon) },
+        { name: 'Shiny', level: 100, icon: React.createElement(ShinyIcon) },
     ],
     "Databases": [
         { name: 'MySQL', level: 100, icon: React.createElement(MySQLIcon) },
         { name: 'PostgreSQL', level: 100, icon: React.createElement(PostgreSQLIcon) },
-        // { name: 'Data Warehousing', level: 100, icon: React.createElement(DataWarehouseIcon) },
+        { name: 'SQLite', level: 100, icon: React.createElement(SQLiteIcon) },
     ],
     "Tools & Version Control": [
         { name: 'Git', level: 100, icon: React.createElement(GitIcon) },
         { name: 'GitHub', level: 100, icon: React.createElement(GithubSkillIcon) },
+        { name: 'Vite', level: 100, icon: React.createElement(ViteIcon) },
     ],
 };
 
@@ -64,7 +67,7 @@ export const PROJECTS_DATA: Project[] = [
         image: 'images/pias-project.png',
         tags: ['R', 'R Shiy', 'MariaDB', 'Plotly'],
         liveUrl: 'https://richard-beniga.shinyapps.io/PIAS-Demo/',
-        githubUrl: SOCIAL_LINKS.github,
+        githubUrl: "",
         category: 'Full Stack',
     },
     {

@@ -66,8 +66,12 @@ const Contact: React.FC = () => {
     return (
         <section id="contact" className="py-24 bg-black">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-['Space_Grotesk']">Contact Me</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-['Space_Grotesk']">Ready to Start Your Project?</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-[#6049EA] to-transparent mx-auto mb-12"></div>
+
+                <p className="text-center text-white/80 mb-8 max-w-2xl mx-auto">
+                    Let's discuss your next project, collaboration opportunity, or role. I'm available for new challenges and will respond to your message promptly.
+                </p>
 
                 <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">

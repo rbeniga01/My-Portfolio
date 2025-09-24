@@ -168,8 +168,11 @@ const Projects: React.FC = () => {
     return (
         <section id="projects" className="py-24 bg-black relative">
             <div className="container mx-auto px-6">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-['Space_Grotesk']">Projects Showcase</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 font-['Space_Grotesk']">My Projects</h2>
                 <div className="w-24 h-1 bg-gradient-to-r from-[#6049EA] to-transparent mx-auto mb-12"></div>
+                <p className="text-center text-white/80 mb-12 max-w-3xl mx-auto">
+                Explore data-driven systems and modern AI-integrated web applications.
+                </p>
 
                 <div className="flex justify-center gap-4 mb-12">
                     {(['All', 'Full Stack', 'AI / Interactive App'] as const).map(category => (

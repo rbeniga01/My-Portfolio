@@ -125,3 +125,12 @@ export const GitIcon: React.FC = () => (
 export const GithubSkillIcon: React.FC = () => (
 <img src="/logos/github.png" alt="GitHub" className="w-12 h-12" />
 );
+export const ExpressIcon: React.FC = () => (
+<img src="/logos/expressjs.png" alt="ExpressJs" className="w-12 h-12" />
+);
+export const ShinyIcon: React.FC = () => (
+    <img src="/logos/shiny.svg" alt="Shiny" className="w-12 h-12" />
+);
+export const SQLiteIcon: React.FC = () => (
+    <img src="/logos/sqlite.svg" alt="SQLite" className="w-12 h-12" />
+);

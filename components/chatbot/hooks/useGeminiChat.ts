@@ -18,7 +18,7 @@ interface Message {
 export const useGeminiChat = ( systemInstruction: string) => {
     const [messages, setMessages] = useState<Message[]>([
         { role: 'model', text: "Hi! I'm Aros, your AI assistant. Ask me anything about Richard's portfolio." },
-        { role: 'model', text: "I am still in development, so I may not have all the informatio but feel free to ask." }
+        { role: 'model', text: "I am still in development, so I may not have all the informations but feel free to ask." }
     ]);
     const [isLoading, setIsLoading] = useState(false);
     const chatRef = useRef<Chat | null>(null);
